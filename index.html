@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Game Idea Generator</title>
+  <meta name="description" content="Generate fresh mobile & indie game concepts with AI. Built by Iqra Zainab." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <span class="badge">🎮 AI × Game Design</span>
+    <h1>Game Idea <span class="grad">Generator</span></h1>
+    <p>Pick a theme, genre and platform, and get a ready-to-prototype game concept in seconds.</p>
+  </header>
+
+  <main class="container">
+    <form id="ideaForm" class="card controls">
+      <label>Theme
+        <input id="theme" type="text" placeholder="e.g. frogs, space, cozy café" value="frogs" />
+      </label>
+      <label>Genre
+        <select id="genre">
+          <option>Hyper-casual</option>
+          <option>Puzzle</option>
+          <option>Endless runner</option>
+          <option>Idle / Tycoon</option>
+          <option>Platformer</option>
+          <option>Roguelike</option>
+        </select>
+      </label>
+      <label>Platform
+        <select id="platform">
+          <option>Mobile</option>
+          <option>Web (WebGL)</option>
+          <option>PC</option>
+          <option>VR / Metaverse</option>
+        </select>
+      </label>
+      <label class="toggle">
+        <input id="useAI" type="checkbox" />
+        <span>Use real AI (needs API key)</span>
+      </label>
+      <label id="keyWrap" class="hidden">Anthropic API key
+        <input id="apiKey" type="password" placeholder="sk-ant-..." autocomplete="off" />
+      </label>
+      <button type="submit" class="primary">✨ Generate idea</button>
+    </form>
+
+    <section id="result" class="card result hidden" aria-live="polite"></section>
+
+    <section class="saved">
+      <h2>⭐ Saved ideas</h2>
+      <div id="savedList" class="saved-list"><p class="muted">No saved ideas yet.</p></div>
+    </section>
+  </main>
+
+  <footer>Made with 💜 by <a href="https://github.com/Dev-IqraZainab">Iqra Zainab</a></footer>
+
+  <script src="generator.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
